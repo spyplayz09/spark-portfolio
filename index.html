@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090c" />
+  <meta name="description" content="Spark — Minecraft and full-stack developer with 5+ years of experience building plugins, systems, websites and bots." />
+  <title>Spark — Minecraft & Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#09090c;--panel:#111116;--panel2:#15151b;--line:#282830;--text:#f5f4f6;--muted:#a09da7;--red:#f04452;--red2:#b91f31;--glow:rgba(240,68,82,.22);--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 80% 4%,rgba(174,27,47,.14),transparent 35%),radial-gradient(ellipse at 5% 42%,rgba(174,27,47,.08),transparent 32%)}
+    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.mono{font-family:"DM Mono",monospace}.eyebrow{display:flex;align-items:center;gap:10px;color:#ff6975;font:500 11px "DM Mono",monospace;letter-spacing:.16em;text-transform:uppercase}.eyebrow:before{content:"";width:24px;height:1px;background:var(--red)}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(9,9,12,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.08em}.brand-mark{width:37px;height:37px;display:grid;place-items:center;background:linear-gradient(145deg,#ff5966,#a90e25);border-radius:11px;box-shadow:0 7px 25px var(--glow);font-size:19px}.brand small{display:block;color:#88848e;font:10px "DM Mono",monospace;letter-spacing:.18em;margin-top:-4px}.nav-links{display:flex;align-items:center;gap:29px;color:#b6b2bc;font-size:12px;font-weight:700}.nav-links a:hover{color:white}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(240,68,82,.45);background:linear-gradient(135deg,#f04452,#bc1e32);color:white;padding:12px 18px;border-radius:9px;font-size:12px;font-weight:800;box-shadow:0 8px 30px rgba(240,68,82,.13);transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(240,68,82,.25)}.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;border-radius:8px;padding:8px}
+    .hero{min-height:760px;padding:170px 0 100px;display:flex;align-items:center;position:relative}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center}.availability{display:inline-flex;align-items:center;gap:9px;border:1px solid #343039;background:rgba(20,19,24,.7);border-radius:30px;padding:7px 12px;color:#c8c3cc;font:10px "DM Mono",monospace;letter-spacing:.07em;margin-bottom:28px}.pulse{width:7px;height:7px;background:#5ce09a;border-radius:50%;box-shadow:0 0 0 5px rgba(92,224,154,.1)}h1{font-size:clamp(48px,7vw,82px);line-height:1.02;letter-spacing:-.065em;margin:0 0 22px;font-weight:800}.accent{color:var(--red)}.hero-copy{max-width:620px;color:#aaa6b0;font-size:15px;line-height:1.9}.hero-copy strong{color:#eee}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}.btn.secondary{background:#141419;border-color:#393640;box-shadow:none;color:#e9e6eb}.hero-meta{display:flex;gap:30px;margin-top:54px;padding-top:25px;border-top:1px solid var(--line)}.meta-item strong{display:block;font-size:25px;letter-spacing:-.05em}.meta-item span{font:10px "DM Mono",monospace;color:#8e8994;text-transform:uppercase;letter-spacing:.1em}
+    .hero-art{position:relative;min-height:430px;display:grid;place-items:center}.orbit{position:absolute;width:370px;height:370px;border:1px solid rgba(240,68,82,.19);border-radius:50%;box-shadow:0 0 80px rgba(240,68,82,.06),inset 0 0 60px rgba(240,68,82,.04)}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed rgba(240,68,82,.17);border-radius:50%;inset:28px}.orbit:after{inset:65px;border-style:solid;opacity:.5}.core-card{position:relative;width:min(340px,90%);padding:30px;border:1px solid #39313a;border-radius:22px;background:linear-gradient(145deg,rgba(28,25,31,.97),rgba(13,13,18,.98));box-shadow:0 30px 100px rgba(0,0,0,.5),0 0 70px rgba(240,68,82,.12);transform:rotate(-3deg)}.core-top{display:flex;justify-content:space-between;color:#918b97;font:10px "DM Mono",monospace}.core-logo{height:150px;display:grid;place-items:center;margin:22px 0;background:radial-gradient(circle,rgba(240,68,82,.23),transparent 65%);font-size:112px;font-weight:800;letter-spacing:-.12em;color:#f04452;text-shadow:0 0 45px rgba(240,68,82,.45)}.core-bottom{border-top:1px solid #302a33;padding-top:18px;display:flex;justify-content:space-between;align-items:center}.core-bottom strong{font-size:13px}.core-bottom span{font:10px "DM Mono",monospace;color:#8e8994}.float-tag{position:absolute;padding:11px 14px;border:1px solid #38313a;border-radius:10px;background:#141319;box-shadow:0 15px 35px #0008;font:10px "DM Mono",monospace;color:#d6d1da}.tag-a{top:56px;right:0}.tag-b{bottom:55px;left:0}.tag-c{top:45%;right:-18px;color:#ff7c86}
+    section{padding:105px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:45px}.section-head h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.055em;line-height:1.1;margin:13px 0 0}.section-desc{max-width:390px;color:var(--muted);font-size:13px}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px}.about-card{border:1px solid var(--line);border-radius:16px;padding:28px;background:linear-gradient(145deg,#15141a,#0f0f14);min-height:260px}.about-card .big{font-size:65px;line-height:1;font-weight:800;letter-spacing:-.08em;color:var(--red)}.about-card p{color:#aaa6b0;font-size:13px}.about-text h3{font-size:22px;letter-spacing:-.04em;margin:0 0 14px}.about-text p{color:var(--muted);font-size:14px;margin:0 0 15px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}.chip{border:1px solid #34313a;background:#141319;padding:7px 10px;border-radius:6px;color:#c7c2cc;font:10px "DM Mono",monospace}
+    .skills{background:linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)}.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.skill{padding:22px;border:1px solid var(--line);border-radius:13px;background:rgba(17,17,22,.82);transition:.2s}.skill:hover,.project:hover,.service:hover{border-color:rgba(240,68,82,.55);transform:translateY(-4px)}.skill-icon{width:39px;height:39px;border-radius:10px;display:grid;place-items:center;background:rgba(240,68,82,.12);color:#ff6571;font-weight:800;margin-bottom:18px}.skill h3{font-size:14px;margin:0 0 6px}.skill p{font-size:11px;color:#918c97;margin:0}.skill-level{height:3px;background:#29262e;border-radius:9px;margin-top:17px;overflow:hidden}.skill-level i{display:block;height:100%;background:linear-gradient(90deg,#a91c30,#ff5966);border-radius:9px}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{border:1px solid var(--line);border-radius:14px;padding:25px;background:linear-gradient(145deg,#15141a,#101015);transition:.2s}.service .number{font:11px "DM Mono",monospace;color:var(--red)}.service h3{font-size:17px;margin:25px 0 9px}.service p{font-size:12px;color:var(--muted);margin:0}.service .service-tags{margin-top:20px;color:#d2cbd5;font:10px "DM Mono",monospace}
+
+    .servers{background:linear-gradient(180deg,transparent,rgba(240,68,82,.025),transparent)}
+
+    .featured-server-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 24px}
+    .featured-server{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:22px 18px 20px;border:2px solid #111;border-radius:16px;background:#fff;box-shadow:5px 6px 0 #111;overflow:hidden;transition:.22s}
+    .featured-server:hover{transform:translate(-2px,-3px);box-shadow:7px 9px 0 #111;border-color:#e83b4c}
+    .featured-rank{align-self:flex-start;font:800 11px "DM Mono",monospace;color:#111;background:#ffe36c;border:1.5px solid #111;border-radius:6px;padding:5px 8px;box-shadow:2px 2px 0 #111}
+    .featured-rank span{color:#d92d42;font-size:8px;margin-left:5px;letter-spacing:.08em}
+    .featured-logo-wrap{width:150px;height:145px;display:grid;place-items:center;margin:12px auto 10px}
+    .featured-logo-wrap img{display:block;max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(3px 5px 0 rgba(0,0,0,.12))}
+    .featured-server:nth-child(3) .featured-logo-wrap img{border-radius:12px}
+    .featured-name{font-size:19px;font-weight:900;letter-spacing:-.04em;color:#080808}
+    .featured-caption{margin-top:3px;color:#d02b40;font:9px "DM Mono",monospace;letter-spacing:.1em}
+    @media(max-width:620px){.featured-server-grid{grid-template-columns:1fr;gap:13px}.featured-server{min-height:0}.featured-logo-wrap{width:135px;height:125px}}
+
+    .server-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+    .server-card{position:relative;display:flex;align-items:center;gap:18px;min-height:145px;padding:22px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#15141a,#101015);transition:.22s;overflow:hidden}
+    .server-card:after{content:"";position:absolute;width:130px;height:130px;right:-60px;bottom:-80px;border-radius:50%;background:rgba(240,68,82,.10);filter:blur(25px);pointer-events:none}
+    .server-card:hover{border-color:rgba(240,68,82,.55);transform:translateY(-4px)}
+    .server-monogram{flex:0 0 62px;width:62px;height:62px;display:grid;place-items:center;border:1px solid rgba(240,68,82,.34);border-radius:13px;background:linear-gradient(145deg,rgba(240,68,82,.19),rgba(240,68,82,.035));color:#fff;font-size:32px;font-weight:800;letter-spacing:-.08em;text-shadow:0 0 25px rgba(240,68,82,.4)}
+    .server-monogram span{color:var(--red)}
+    .server-copy{min-width:0}.server-type{font:9px "DM Mono",monospace;letter-spacing:.13em;color:#ff6975;margin-bottom:4px}
+    .server-copy h3{font-size:17px;margin:0 0 5px;letter-spacing:-.03em}.server-copy p{font-size:11px;line-height:1.7;color:var(--muted);margin:0;max-width:440px}
+    .server-arrow{position:absolute;right:18px;top:16px;color:#8f4650;font-size:15px}
+    .server-note{margin:18px 0 0;color:#77727d;font:10px "DM Mono",monospace;letter-spacing:.02em}
+
+    .projects{background:linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)}.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#111116;transition:.2s}.project-visual{height:190px;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 30%,rgba(240,68,82,.25),transparent 45%),linear-gradient(135deg,#21141a,#101015)}.project-visual:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:25px 25px;mask-image:linear-gradient(to bottom,black,transparent)}.visual-label{position:absolute;left:24px;top:22px;color:#ff818a;font:10px "DM Mono",monospace;letter-spacing:.12em}.visual-word{position:absolute;bottom:15px;left:25px;font-size:52px;font-weight:800;letter-spacing:-.08em;color:#fff;text-shadow:0 0 35px rgba(240,68,82,.4)}.project-info{padding:22px 24px 25px}.project-info h3{margin:0 0 7px;font-size:17px}.project-info p{color:var(--muted);font-size:12px;margin:0}.project-info .chips{margin-top:16px}
+    .timeline{border-left:1px solid #3a3038;margin-left:9px;padding-left:30px}.timeline-item{position:relative;padding:0 0 35px}.timeline-item:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--red);left:-35px;top:7px;box-shadow:0 0 0 5px rgba(240,68,82,.12)}.timeline-item .date{font:10px "DM Mono",monospace;color:#ff6975}.timeline-item h3{font-size:16px;margin:7px 0}.timeline-item p{font-size:12px;color:var(--muted);max-width:650px;margin:0}
+    .contact-box{position:relative;overflow:hidden;border:1px solid rgba(240,68,82,.35);border-radius:20px;padding:55px;background:radial-gradient(ellipse at 90% 10%,rgba(240,68,82,.18),transparent 45%),linear-gradient(135deg,#171218,#101015)}.contact-box h2{font-size:clamp(35px,5vw,58px);letter-spacing:-.06em;line-height:1.08;max-width:700px;margin:15px 0}.contact-box p{color:var(--muted);font-size:13px;max-width:570px}.contact-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:27px}.email-text{font:12px "DM Mono",monospace;color:#d9d3dd}.copy-btn{border:1px solid #40343d;background:#17151b;color:#eee;border-radius:8px;padding:11px 14px;font-size:11px;cursor:pointer}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:#77727d;font:10px "DM Mono",monospace}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner strong{color:#d5d0d8}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:25px}.hero{padding-top:140px}.hero-art{min-height:390px}.about-grid{grid-template-columns:1fr;gap:25px}.skill-grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.nav-links{gap:15px}.nav-links a{font-size:11px}}
+    @media(max-width:620px){.server-grid{grid-template-columns:1fr}.server-card{min-height:130px;padding:17px}.server-monogram{flex-basis:54px;width:54px;height:54px;font-size:28px}.server-copy h3{font-size:15px}.server-copy p{font-size:10px}.wrap{width:min(100% - 32px,var(--max))}.nav-inner{height:66px}.menu-btn{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;padding:18px 22px 22px;background:#0d0d12;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.hero{min-height:auto;padding:125px 0 65px}.hero-art{min-height:330px}.orbit{width:285px;height:285px}.core-card{width:270px;padding:22px}.core-logo{height:115px;font-size:86px}.tag-a{right:-3px;top:20px}.tag-b{left:-2px;bottom:22px}.tag-c{right:-6px}.hero-meta{gap:17px}.meta-item strong{font-size:21px}.meta-item span{font-size:8px}.section-head{display:block}.section-desc{margin-top:17px}.skill-grid{gap:9px}.skill{padding:16px}.service-grid,.project-grid{grid-template-columns:1fr}.project-visual{height:160px}section{padding:75px 0}.contact-box{padding:30px 23px}.contact-box h2{font-size:38px}.email-text{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+    /* OHO-inspired visual direction: warm cream, ink-black outlines, bold red accents */
+    :root{--bg:#fffbed;--panel:#fff;--panel2:#f5f2e8;--line:#111;--text:#080808;--muted:#66645f;--red:#e83b4c;--red2:#c91f35;--glow:rgba(232,59,76,.16)}
+    body{background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif}
+    body:before{background:radial-gradient(ellipse at 90% 5%,rgba(232,59,76,.08),transparent 32%),radial-gradient(ellipse at 4% 48%,rgba(255,214,80,.10),transparent 27%)}
+    .nav{background:rgba(255,251,237,.94);backdrop-filter:blur(16px);border-bottom:2px solid #111}
+    .brand{color:#080808}.brand small{color:#68645e}.brand-mark{border:2px solid #111;border-radius:10px;background:#e83b4c;color:#fff;box-shadow:3px 4px 0 #111}
+    .nav-links{color:#333}.nav-links a:hover{color:var(--red)}
+    .nav-cta,.btn{border:2px solid #111;background:#e83b4c;color:#080808;border-radius:11px;box-shadow:4px 5px 0 #111}
+    .nav-cta:hover,.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 7px 0 #111}
+    .btn.secondary{background:#fff;color:#080808;border:2px solid #111;box-shadow:4px 5px 0 #111}
+    .menu-btn{border:2px solid #111;color:#111;background:#fff;box-shadow:3px 3px 0 #111}
+    .eyebrow{color:#d92d42;font-weight:800}.eyebrow:before{background:#111;height:3px}
+    .availability{border:2px solid #111;background:#fff;color:#222;border-radius:9px;box-shadow:3px 4px 0 #111}
+    .pulse{background:#28c76f;box-shadow:0 0 0 5px rgba(40,199,111,.13)}
+    h1{color:#080808;letter-spacing:-.07em;font-weight:900}
+    .accent{color:#e83b4c}
+    .hero-copy{color:#5f5b57}.hero-copy strong{color:#111}
+    .hero-meta{border-top:2px solid #111}.meta-item strong{color:#080808}.meta-item span{color:#77716a}
+    .hero-art .orbit{border:2px solid rgba(17,17,17,.16);box-shadow:none}.hero-art .orbit:before,.hero-art .orbit:after{border-color:rgba(17,17,17,.13)}
+    .core-card{border:3px solid #111;border-radius:20px;background:#fff;box-shadow:8px 9px 0 #111;transform:rotate(-2deg)}
+    .core-top{color:#555}.core-logo{color:#e83b4c;text-shadow:4px 4px 0 #111;background:radial-gradient(circle,rgba(232,59,76,.13),transparent 65%)}
+    .core-bottom{border-top:2px solid #111}.core-bottom strong{color:#111}.core-bottom span{color:#777}
+    .float-tag{border:2px solid #111;border-radius:8px;background:#fff;box-shadow:4px 5px 0 #111;color:#111}
+    section{color:#080808}.section-head h2{font-weight:900;letter-spacing:-.065em}
+    .section-desc{color:#65615c}
+    .about-card{border:2px solid #111;border-radius:16px;background:#fff;box-shadow:6px 7px 0 #111}
+    .about-card .big{color:#e83b4c}.about-card p,.about-text p{color:#5e5a55}.about-text h3{color:#080808}
+    .chip{border:1.5px solid #111;background:#fff;color:#222;border-radius:6px;box-shadow:2px 2px 0 #111}
+    .skills,.projects,.servers{background:transparent}
+    .skill{border:2px solid #111;border-radius:13px;background:#fff;box-shadow:4px 5px 0 #111}
+    .skill:hover,.project:hover,.service:hover,.server-card:hover{border-color:#e83b4c;transform:translate(-2px,-2px);box-shadow:6px 7px 0 #111}
+    .skill-icon{border:2px solid #111;border-radius:9px;background:#ffe36c;color:#111}
+    .skill h3,.service h3,.project-info h3,.server-copy h3{color:#080808}
+    .skill p{color:#68635d}.skill-level{background:#e6e1d6;border:1px solid #111;height:6px}.skill-level i{background:#e83b4c}
+    .service{border:2px solid #111;border-radius:13px;background:#fff;box-shadow:4px 5px 0 #111}
+    .service .number{color:#d92d42;font-weight:700}.service p{color:#625d58}.service .service-tags{color:#333}
+    .project{border:2px solid #111;border-radius:15px;background:#fff;box-shadow:5px 6px 0 #111}
+    .project-visual{background:radial-gradient(circle at 70% 30%,rgba(232,59,76,.25),transparent 45%),linear-gradient(135deg,#f7d9d7,#f5eddb);border-bottom:2px solid #111}
+    .project-visual:before{background-image:radial-gradient(#111 1px,transparent 1px);background-size:12px 12px;opacity:.12}
+    .visual-label{color:#b81d31;font-weight:700}.visual-word{color:#111;text-shadow:3px 3px 0 #e83b4c}
+    .project-info p{color:#625d58}
+    .server-card{border:2px solid #111;border-radius:14px;background:#fff;box-shadow:4px 5px 0 #111}
+    .server-card:after{background:rgba(232,59,76,.13)}
+    .server-monogram{border:2px solid #111;border-radius:11px;background:#ffe36c;color:#111;text-shadow:2px 2px 0 #e83b4c}
+    .server-monogram span{color:#e83b4c}.server-type{color:#c82c40}.server-copy p{color:#625d58}.server-arrow{color:#e83b4c}
+    .server-note{color:#716b64}
+    .timeline{border-left:2px solid #111}.timeline-item:before{background:#e83b4c;box-shadow:0 0 0 5px rgba(232,59,76,.15);border:1px solid #111}
+    .timeline-item .date{color:#d92d42}.timeline-item h3{color:#080808}.timeline-item p{color:#625d58}
+    .contact-box{border:3px solid #111;border-radius:18px;background:#e83b4c;box-shadow:8px 9px 0 #111}
+    .contact-box .eyebrow{color:#111}.contact-box .eyebrow:before{background:#111}
+    .contact-box h2,.contact-box h2 .accent{color:#fff}.contact-box p{color:#2b1719}
+    .contact-box .btn{background:#fff;color:#111}.email-text{color:#111;font-weight:700}
+    .copy-btn{border:2px solid #111;background:#fff;color:#111;box-shadow:3px 4px 0 #111}
+    footer{border-top:2px solid #111;color:#6f6962}footer strong{color:#111}
+    @media(max-width:620px){.nav-links{background:#fffbed;border-bottom:2px solid #111}.core-card{box-shadow:6px 7px 0 #111}}
+
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Spark home"><span class="brand-mark">S</span><span>SPARK<small>DEVELOPER PORTFOLIO</small></span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#servers">Servers</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let's Talk <span>↗</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <div class="availability"><i class="pulse"></i> OPEN TO SELECT PROJECTS <span style="color:#555">/</span> 2026</div>
+          <div class="eyebrow">MINECRAFT & FULL-STACK DEVELOPER</div>
+          <h1>Turning ideas<br>into <span class="accent">reality.</span><br>I'm Spark<span class="accent">.</span></h1>
+          <p class="hero-copy">A passionate <strong>Minecraft developer and full-stack builder</strong> with 5+ years of hands-on experience, creating standout server communities and digital products. I create custom plugins, smart automation, powerful web applications and polished digital experiences that help communities grow.</p>
+          <div class="hero-actions"><a class="btn" href="#projects">Explore My Work <span>↗</span></a><a class="btn secondary" href="#contact">Contact Me <span>→</span></a></div>
+          <div class="hero-meta">
+            <div class="meta-item"><strong>5<span class="accent">+</span></strong><span>Years Experience</span></div>
+            <div class="meta-item"><strong>Full</strong><span>Stack Mindset</span></div>
+            <div class="meta-item"><strong>∞</strong><span>Ideas to Build</span></div>
+          </div>
+        </div>
+        <div class="hero-art reveal" aria-label="Spark developer identity graphic">
+          <div class="orbit"></div>
+          <div class="float-tag tag-a">JAVA / PLUGINS</div><div class="float-tag tag-b">NODE.JS · PYTHON</div><div class="float-tag tag-c">BUILD // CREATE</div>
+          <div class="core-card"><div class="core-top"><span>SPARK.DEV</span><span>EST. 2021 — NOW</span></div><div class="core-logo">S.</div><div class="core-bottom"><strong>Developer / Creator</strong><span>STATUS: ONLINE</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">A LITTLE INTRODUCTION</div><h2>More than just<br><span class="accent">writing code.</span></h2></div><p class="section-desc">I enjoy solving real problems with clean systems, thoughtful design and technology that makes an impact.</p></div>
+        <div class="about-grid">
+          <div class="about-card reveal"><div class="eyebrow">THE DEVELOPER BEHIND THE SCREEN</div><div class="big">5Y<span style="color:#eee">+</span></div><p>Curiosity turned into years of building, experimenting, breaking things and making them better.</p><div class="chips"><span class="chip">Creative Thinking</span><span class="chip">Problem Solving</span><span class="chip">Continuous Learning</span></div></div>
+          <div class="about-text reveal"><h3>Hey, I'm Spark — a developer who loves building things that work beautifully.</h3><p>My work sits at the intersection of Minecraft development and full-stack engineering. From gameplay systems and server-side tools to web dashboards and Discord bots, I like taking an idea from a rough concept to a complete, usable product.</p><p>I care about more than whether something works. I focus on performance, maintainability, user experience and the small details that make a project feel finished.</p><p>Whether it's a custom Minecraft feature, an automation tool or a modern website, my goal is simple: build it properly and make it stand out.</p><div class="chips"><span class="chip">Minecraft Ecosystem</span><span class="chip">Backend Development</span><span class="chip">UI / UX</span><span class="chip">Automation</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">MY TOOLKIT</div><h2>Skills & <span class="accent">expertise.</span></h2></div><p class="section-desc">A versatile toolkit for building reliable server experiences, applications and connected systems.</p></div>
+        <div class="skill-grid">
+          <article class="skill reveal"><div class="skill-icon">MC</div><h3>Minecraft Development</h3><p>Paper, Spigot, Bukkit, server systems</p><div class="skill-level"><i style="width:95%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">J</div><h3>Java</h3><p>Plugin architecture and custom features</p><div class="skill-level"><i style="width:88%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">SK</div><h3>Skript & Configs</h3><p>Gameplay logic, menus and automation</p><div class="skill-level"><i style="width:92%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">JS</div><h3>Node.js</h3><p>APIs, bots and backend applications</p><div class="skill-level"><i style="width:86%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">Py</div><h3>Python</h3><p>Scripts, tooling and automation</p><div class="skill-level"><i style="width:84%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">WEB</div><h3>Web Development</h3><p>HTML, CSS, JavaScript and responsive UI</p><div class="skill-level"><i style="width:89%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">DB</div><h3>Databases & APIs</h3><p>Data models and service integrations</p><div class="skill-level"><i style="width:78%"></i></div></article>
+          <article class="skill reveal"><div class="skill-icon">UI</div><h3>UI / UX Design</h3><p>Modern layouts and user-focused design</p><div class="skill-level"><i style="width:87%"></i></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">WHAT I CAN BUILD</div><h2>Services & <span class="accent">solutions.</span></h2></div><p class="section-desc">From a single custom feature to a complete digital product, I turn requirements into practical solutions.</p></div>
+        <div class="service-grid">
+          <article class="service reveal"><div class="number">01 / GAME SYSTEMS</div><h3>Custom Minecraft Plugins</h3><p>Unique mechanics, commands, events, placeholders and server features built around your gameplay vision.</p><div class="service-tags">JAVA · PAPER · SPIGOT</div></article>
+          <article class="service reveal"><div class="number">02 / SERVER EXPERIENCE</div><h3>Server Setup & Integration</h3><p>Plugin configuration, menus, permissions, resource-pack integration and connected server systems.</p><div class="service-tags">CONFIGS · SKRIPT · API</div></article>
+          <article class="service reveal"><div class="number">03 / WEB PRODUCTS</div><h3>Websites & Dashboards</h3><p>Responsive websites, admin dashboards and clean interfaces designed for desktop and mobile.</p><div class="service-tags">HTML · CSS · JS</div></article>
+          <article class="service reveal"><div class="number">04 / AUTOMATION</div><h3>Discord Bots & Tools</h3><p>Community bots, utility commands, integrations and automation that reduce repetitive work.</p><div class="service-tags">NODE.JS · PYTHON</div></article>
+          <article class="service reveal"><div class="number">05 / EXPERIENCE DESIGN</div><h3>UI / UX & GUI Design</h3><p>Intuitive menus, polished layouts and consistent visual systems that make products easier to use.</p><div class="service-tags">UI · UX · DESIGN</div></article>
+          <article class="service reveal"><div class="number">06 / CUSTOM WORK</div><h3>Technical Solutions</h3><p>Have a different idea? I can help plan the approach, choose the right tools and build a solution.</p><div class="service-tags">IDEAS · BUILD · IMPROVE</div></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="servers" class="servers">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">COMMUNITIES & SERVER BRANDS</div><h2>Servers I've <span class="accent">worked on.</span></h2></div>
+          <p class="section-desc">A showcase of Minecraft server brands and community projects connected to my development journey — from identity and setup to custom gameplay experiences.</p>
+        </div>
+
+        <div class="featured-server-grid reveal">
+          <article class="featured-server">
+            <div class="featured-rank">01 <span>FEATURED</span></div>
+            <div class="featured-logo-wrap"><img src="assets/shulkermc-logo.png" alt="ShulkerMC server logo"></div>
+            <div class="featured-name">ShulkerMC</div>
+            <div class="featured-caption">MINECRAFT SERVER PROJECT</div>
+          </article>
+          <article class="featured-server">
+            <div class="featured-rank">02 <span>FEATURED</span></div>
+            <div class="featured-logo-wrap"><img src="assets/candlemc-logo.png" alt="CandleMC server logo"></div>
+            <div class="featured-name">CandleMC</div>
+            <div class="featured-caption">MINECRAFT SERVER PROJECT</div>
+          </article>
+          <article class="featured-server">
+            <div class="featured-rank">03 <span>FEATURED</span></div>
+            <div class="featured-logo-wrap"><img src="assets/minecrest-logo.png" alt="MineCrest server logo"></div>
+            <div class="featured-name">MineCrest</div>
+            <div class="featured-caption">MINECRAFT SERVER PROJECT</div>
+          </article>
+        </div>
+
+        <div class="server-grid">
+          <article class="server-card reveal"><div class="server-monogram">S<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>ShulkerMC</h3><p>Server brand focused on a polished multiplayer experience, custom features and a memorable community identity.</p></div><span class="server-arrow">↗</span></article>
+          <article class="server-card reveal"><div class="server-monogram">M<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>MineCrest</h3><p>A server project with a distinctive visual identity, player-facing presentation and gameplay-focused setup.</p></div><span class="server-arrow">↗</span></article>
+          <article class="server-card reveal"><div class="server-monogram">C<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>CandleMC</h3><p>A custom server brand explored through logo direction, resource-pack presentation and website design.</p></div><span class="server-arrow">↗</span></article>
+          <article class="server-card reveal"><div class="server-monogram">S<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>ShogunMC</h3><p>A server identity concept built around a strong name, recognizable branding and a cohesive player experience.</p></div><span class="server-arrow">↗</span></article>
+          <article class="server-card reveal"><div class="server-monogram">C<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>CherryCraft</h3><p>A community server brand with room for custom visuals, server systems and a clean, consistent presentation.</p></div><span class="server-arrow">↗</span></article>
+          <article class="server-card reveal"><div class="server-monogram">F<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>FeralSMP</h3><p>An SMP project with bold branding direction and a focus on a distinctive, modern Minecraft identity.</p></div><span class="server-arrow">↗</span></article>
+          <article class="server-card reveal"><div class="server-monogram">M<span>.</span></div><div class="server-copy"><div class="server-type">MINECRAFT SERVER</div><h3>Minegreat</h3><p>A server project included in my portfolio of Minecraft community and development work.</p></div><span class="server-arrow">↗</span></article>
+        </div>
+        <p class="server-note">Server showcase · Project involvement and scope may vary. Ask me about the specific work behind each project.</p>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">SELECTED WORK</div><h2>Projects & <span class="accent">experiments.</span></h2></div><p class="section-desc">A selection of development directions and product concepts spanning Minecraft systems, web experiences and automation. Replace these descriptions with live demos or detailed case studies as they become public.</p></div>
+        <div class="project-grid">
+          <article class="project reveal"><div class="project-visual"><div class="visual-label">MINECRAFT / PLUGIN</div><div class="visual-word">SPARK</div></div><div class="project-info"><h3>Custom Minecraft Systems</h3><p>Gameplay-focused plugin concepts, server utilities, custom menus and feature integrations designed to make multiplayer experiences more engaging.</p><div class="chips"><span class="chip">Java</span><span class="chip">Paper / Spigot</span><span class="chip">Skript</span></div></div></article>
+          <article class="project reveal"><div class="project-visual"><div class="visual-label">WEB / DASHBOARD</div><div class="visual-word">CONTROL.</div></div><div class="project-info"><h3>Web Dashboards & Portals</h3><p>Modern dark-themed interfaces with responsive layouts, clear navigation and practical controls for managing digital projects.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">JavaScript</span><span class="chip">UI Design</span></div></div></article>
+          <article class="project reveal"><div class="project-visual"><div class="visual-label">AUTOMATION / BOT</div><div class="visual-word">AUTOMATE</div></div><div class="project-info"><h3>Discord Bots & Automation</h3><p>Bot workflows and utility tools that connect communities with useful commands, streamlined processes and custom integrations.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Python</span><span class="chip">APIs</span></div></div></article>
+          <article class="project reveal"><div class="project-visual"><div class="visual-label">DESIGN / EXPERIENCE</div><div class="visual-word">PIXEL.</div></div><div class="project-info"><h3>Game UI & Resource Experiences</h3><p>Thoughtful GUI layouts, item presentation, resource-pack concepts and visual details that bring a server identity together.</p><div class="chips"><span class="chip">Minecraft</span><span class="chip">UI / UX</span><span class="chip">Design</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">THE JOURNEY</div><h2>Experience & <span class="accent">growth.</span></h2></div><p class="section-desc">Five-plus years of learning by building — continuously expanding skills across game servers and software.</p></div>
+        <div class="timeline reveal">
+          <div class="timeline-item"><div class="date">2021 — PRESENT</div><h3>Independent Developer · 5+ Years</h3><p>Building and experimenting across Minecraft server development, custom features, configuration systems, web projects and automation tools.</p></div>
+          <div class="timeline-item"><div class="date">FULL-STACK DEVELOPMENT</div><h3>Expanding Beyond Minecraft</h3><p>Working with Node.js, Python and modern web technologies to create bots, dashboards, websites and connected applications.</p></div>
+          <div class="timeline-item"><div class="date">ALWAYS IN PROGRESS</div><h3>Design, Improve, Repeat</h3><p>Continuously exploring better architecture, cleaner user interfaces, new tools and more reliable ways to ship projects.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-box reveal">
+          <div class="eyebrow">HAVE A PROJECT IN MIND?</div>
+          <h2>Let's build something <span class="accent">great.</span></h2>
+          <p>Have an idea for a Minecraft server, custom plugin, website, bot or a completely different project? Tell me what you're imagining. Let's turn it into something real.</p>
+          <div class="contact-actions"><a class="btn" href="mailto:itsmesparkop@gmail.com?subject=Project%20Inquiry%20for%20Spark">Email Me <span>↗</span></a><span class="email-text">itsmesparkop@gmail.com</span><button class="copy-btn" id="copyEmail">Copy email</button></div>
+          <p id="copyStatus" aria-live="polite" style="min-height:18px;margin-top:10px;font-size:11px"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> <strong>SPARK.DEV</strong> — Built with purpose.</span><span>MINECRAFT DEVELOPER · FULL-STACK BUILDER</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const copyBtn=document.getElementById('copyEmail');
+    copyBtn.addEventListener('click',async()=>{
+      const email='itsmesparkop@gmail.com';
+      try{await navigator.clipboard.writeText(email);document.getElementById('copyStatus').textContent='Email copied to clipboard.';}
+      catch(e){document.getElementById('copyStatus').textContent='Email: '+email;}
+    });
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
